@@ -10,7 +10,6 @@ body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.75rem;
 	background-color: var(--bg-color);
-	color: #1c1c1c;
 	color: var(--default-color);
 	line-height: 1.2;
 	margin: 0;
