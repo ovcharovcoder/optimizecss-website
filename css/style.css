@@ -44,10 +44,15 @@ body {
 	flex: 1 1 45%;
 }
 
-.promo__item-title,
+.promo__item-title {
+	font-family: 'Racing Sans One', sans-serif;
+	text-transform: uppercase;
+}
+
 .promo__btn,
 .promo__about-btn {
-	font-family: 'Racing Sans One', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 700;
 	text-transform: uppercase;
 }
 
