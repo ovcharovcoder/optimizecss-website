@@ -3,11 +3,13 @@
 	--hover-color: #ffa6d6;
 	--hover-color-btn: #747474;
 	--default-color: #1c1c1c;
+	--bg-color: #F3F4F6;
 }
 
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.75rem;
+	background-color: var(--bg-color);
 	color: #1c1c1c;
 	color: var(--default-color);
 	line-height: 1.2;
