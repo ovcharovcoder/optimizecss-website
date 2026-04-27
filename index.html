@@ -9,8 +9,8 @@
     />
     <meta name="author" content="Andrii Ovcharov" />
     <meta name="version" content="3.0" />
-    <link rel="icon" type="img/png" href="img/icon.png" />
-    <link rel="shortcut icon" type="img/png" href="img/icon.png" />
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link rel="shortcut icon" type="image/png" href="img/icon.png" />
     <title>Optimize.css | Modern CSS Reset for Developers</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -40,6 +40,138 @@
     </div>
 
     <div class="hero">
+      <!-- Flying CSS Code Background -->
+      <div class="flying-code">
+        <div class="code-line">
+          <span class="selector">.container</span>
+          <span class="punctuation">{</span>
+          <span class="property">max-width</span>
+          <span class="punctuation">:</span>
+          <span class="value">1280px</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">.hero__image</span>
+          <span class="punctuation">{</span>
+          <span class="property">animation</span>
+          <span class="punctuation">:</span>
+          <span class="value">float 3s infinite</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">@keyframes float</span>
+          <span class="punctuation">{</span>
+          <span class="value">0%</span>
+          <span class="punctuation">{</span>
+          <span class="property">transform</span>
+          <span class="punctuation">:</span>
+          <span class="value">translateY(0)</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">.btn-primary</span>
+          <span class="punctuation">{</span>
+          <span class="property">background</span>
+          <span class="punctuation">:</span>
+          <span class="value">linear-gradient(135deg, #67e9ff, #6b47dc)</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">:root</span>
+          <span class="punctuation">{</span>
+          <span class="property">--accent-color</span>
+          <span class="punctuation">:</span>
+          <span class="value">#667eea</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">[data-theme="dark"]</span>
+          <span class="punctuation">{</span>
+          <span class="property">--bg-primary</span>
+          <span class="punctuation">:</span>
+          <span class="value">#0f172a</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">.info-card:hover</span>
+          <span class="punctuation">{</span>
+          <span class="property">transform</span>
+          <span class="punctuation">:</span>
+          <span class="value">translateY(-5px)</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">@media</span>
+          <span class="punctuation">(</span>
+          <span class="property">max-width</span>
+          <span class="punctuation">:</span>
+          <span class="value">968px</span>
+          <span class="punctuation">)</span>
+          <span class="punctuation">{</span>
+          <span class="selector">.hero__grid</span>
+          <span class="punctuation">{</span>
+          <span class="property">grid-template-columns</span>
+          <span class="punctuation">:</span>
+          <span class="value">1fr</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">.testimonial-card</span>
+          <span class="punctuation">{</span>
+          <span class="property">backdrop-filter</span>
+          <span class="punctuation">:</span>
+          <span class="value">blur(10px)</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">*</span>
+          <span class="punctuation">{</span>
+          <span class="property">margin</span>
+          <span class="punctuation">:</span>
+          <span class="value">0</span>
+          <span class="punctuation">;</span>
+          <span class="property">padding</span>
+          <span class="punctuation">:</span>
+          <span class="value">0</span>
+          <span class="punctuation">;</span>
+          <span class="property">box-sizing</span>
+          <span class="punctuation">:</span>
+          <span class="value">border-box</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+        </div>
+
+        <div class="code-line">
+          <span class="selector">.promo__btn</span>
+          <span class="punctuation">{</span>
+          <span class="property">transition</span>
+          <span class="punctuation">:</span>
+          <span class="value">all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)</span>
+          <span class="punctuation">;</span>
+          <span class="punctuation">}</span>
+        </div>
+      </div>
+
       <div class="container">
         <div class="hero__grid">
           <div class="hero__content">
@@ -343,7 +475,7 @@
           <h3 data-i18n="installTitle">Add to your HTML</h3>
           <p data-i18n="installDesc">Add before your main stylesheet:</p>
           <div class="code-block">
-    <pre>
+            <pre>
 &lt;!-- Choose one of these: --&gt;
 &lt;link rel="stylesheet" href="optimize.css"&gt;
 &lt;!-- OR (recommended for production) --&gt;
@@ -351,8 +483,8 @@
 
 &lt;!-- Then add your styles --&gt;
 &lt;link rel="stylesheet" href="your-styles.css"&gt;
-    </pre>
-</div>
+            </pre>
+          </div>
           <p
             data-i18n="installNote"
             style="color: var(--text-muted); margin-top: 16px"
