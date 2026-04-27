@@ -936,17 +936,21 @@ body {
     padding: 0 16px;
   }
 
+  .section-title {
+    margin-bottom: 20px;
+  }
+
   .hero__content h1 {
     font-size: 2rem;
   }
 
   .hero {
-    padding: 180px 0 40px 0;
+    padding: 180px 0 20px 0;
   }
 
   .info-section,
   .testimonials {
-    padding-block: 40px;
+    padding-block: 20px;
   }
 
   .download-group {
@@ -959,6 +963,7 @@ body {
 
   .info-grid {
     grid-template-columns: 1fr;
+    margin-bottom: 0;
   }
 
   .testimonials-grid {
@@ -971,6 +976,9 @@ body {
 
   .nav-menu {
     width: 85%;
+  }
+  .info-section {
+    padding-bottom: 40px;
   }
 }
 
