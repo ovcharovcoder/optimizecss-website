@@ -22,7 +22,7 @@ const translations = {
     principle5Title: 'Predictability',
     principle5Desc: 'Consistent behavior across modern browsers',
     principle6Title: 'Lightweight',
-    principle6Desc: 'Only 1.5KB minified — no bloat, just essentials',
+    principle6Desc: 'Only 2.5KB minified — no bloat, just essentials',
     comparisonTitle: 'Why not reset.css or normalize.css?',
     compFeature: 'Feature',
     compFocus: 'Modern focus styles',
@@ -44,11 +44,11 @@ const translations = {
     role3: 'Senior Developer',
     howToTitle: 'How to install',
     fullVersion: 'Full Version',
-    fullSize: '~3KB (unminified)',
+    fullSize: '~8KB (unminified)',
     fullDesc:
       'Complete version with comments and readable formatting. Perfect for development and learning.',
     minVersion: 'Minified Version',
-    minSize: '~1.5KB (minified)',
+    minSize: '~2.5KB (minified)',
     minDesc:
       'Optimized for production — smaller size, faster loading. All features, no comments.',
     downloadFullBtn: 'Get full version',
@@ -84,7 +84,7 @@ const translations = {
     principle5Desc: 'Консистентна поведінка в сучасних браузерах',
     principle6Title: 'Легковаговий',
     principle6Desc:
-      'Всього 1.5KB у мініфікованому вигляді — без зайвого, тільки необхідне',
+      'Всього 2.5KB у мініфікованому вигляді — без зайвого, тільки необхідне',
     comparisonTitle: 'Чому не reset.css або normalize.css?',
     compFeature: 'Функція',
     compFocus: 'Сучасні focus-стилі',
@@ -106,11 +106,11 @@ const translations = {
     role3: 'Старший Розробник',
     howToTitle: 'Як встановити',
     fullVersion: 'Повна версія',
-    fullSize: '~3KB (не мініфікована)',
+    fullSize: '~8KB (не мініфікована)',
     fullDesc:
       'Повна версія з коментарями та читабельним форматуванням. Ідеально для розробки та навчання.',
     minVersion: 'Мініфікована версія',
-    minSize: '~1.5KB (мініфікована)',
+    minSize: '~2.5KB (мініфікована)',
     minDesc:
       'Оптимізовано для продакшену — менший розмір, швидше завантаження. Всі функції, без коментарів.',
     downloadFullBtn: 'Отримати повну версію',
