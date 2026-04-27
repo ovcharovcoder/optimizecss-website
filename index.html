@@ -343,14 +343,16 @@
           <h3 data-i18n="installTitle">Add to your HTML</h3>
           <p data-i18n="installDesc">Add before your main stylesheet:</p>
           <div class="code-block">
-            <pre>
-          link rel="stylesheet" href="optimize.css"
-          or
-          link rel="stylesheet" href="optimize_min.css"
-          link rel="stylesheet" href="your-styles.css"
-          </pre
-            >
-          </div>
+    <pre>
+&lt;!-- Choose one of these: --&gt;
+&lt;link rel="stylesheet" href="optimize.css"&gt;
+&lt;!-- OR (recommended for production) --&gt;
+&lt;link rel="stylesheet" href="optimize_min.css"&gt;
+
+&lt;!-- Then add your styles --&gt;
+&lt;link rel="stylesheet" href="your-styles.css"&gt;
+    </pre>
+</div>
           <p
             data-i18n="installNote"
             style="color: var(--text-muted); margin-top: 16px"
