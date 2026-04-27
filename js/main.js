@@ -79,7 +79,7 @@ const translations = {
     principle4Desc: 'Правильні focus-стилі та підтримка motion-преференцій',
     principle5Title: 'Передбачуваність',
     principle5Desc: 'Консистентна поведінка в сучасних браузерах',
-    principle6Title: 'Легковаговий',
+    principle6Title: 'Компактний',
     principle6Desc:
       'Всього 2.5KB у мініфікованому вигляді — без зайвого, тільки необхідне',
     testimonialsTitle: 'Що кажуть розробники',
