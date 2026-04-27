@@ -10,28 +10,22 @@ const translations = {
     statLicense: 'license',
     downloadFull: 'Get full version',
     downloadMin: 'Get minified',
+    navPrinciples: 'Key Principles',
+    navTestimonials: 'Testimonials',
+    navInstall: 'How to install',
     principlesTitle: 'Key Principles',
     principle1Title: 'Minimalism',
-    principle1Desc: 'Only essential resets, no unnecessary overrides.',
+    principle1Desc: 'Only essential resets, no unnecessary overrides',
     principle2Title: 'Stability',
-    principle2Desc: 'No rules that break layouts or native behavior.',
+    principle2Desc: 'No rules that break layouts or native behavior',
     principle3Title: 'Neutral baseline',
-    principle3Desc: 'No interference with your design decisions.',
+    principle3Desc: 'No interference with your design decisions',
     principle4Title: 'Accessibility-first',
-    principle4Desc: 'Proper focus styles and motion preferences support.',
+    principle4Desc: 'Proper focus styles and motion preferences support',
     principle5Title: 'Predictability',
-    principle5Desc: 'Consistent behavior across modern browsers.',
+    principle5Desc: 'Consistent behavior across modern browsers',
     principle6Title: 'Lightweight',
-    principle6Desc: 'Only 2.5KB minified — no bloat, just essentials.',
-    comparisonTitle: 'Why not reset.css or normalize.css?',
-    compFeature: 'Feature',
-    compFocus: 'Modern focus styles',
-    compMotion: 'prefers-reduced-motion',
-    compDisabled: 'button:disabled cursor',
-    compSelection: '::selection styling',
-    compTarget: ':target scroll margin',
-    compLegacy: 'No legacy hacks',
-    compWeight: 'Lightweight',
+    principle6Desc: 'Only 2.5KB minified — no bloat, just essentials',
     testimonialsTitle: 'What developers say',
     testimonial1:
       "The best CSS reset I've used! Lightweight, modern, and doesn't break my styles. Highly recommended!",
@@ -71,29 +65,23 @@ const translations = {
     statLicense: 'ліцензія',
     downloadFull: 'Отримати повну версію',
     downloadMin: 'Отримати мініфіковану',
+    navPrinciples: 'Ключові принципи',
+    navTestimonials: 'Відгуки',
+    navInstall: 'Як встановити',
     principlesTitle: 'Ключові принципи',
     principle1Title: 'Мінімалізм',
-    principle1Desc: 'Тільки необхідні скидання, без зайвих перевизначень.',
+    principle1Desc: 'Тільки необхідні скидання, без зайвих перевизначень',
     principle2Title: 'Стабільність',
-    principle2Desc: 'Немає правил, які ламають макети або стандартну поведінку.',
+    principle2Desc: 'Немає правил, які ламають макети або стандартну поведінку',
     principle3Title: 'Нейтральна база',
-    principle3Desc: 'Не втручається у ваші дизайн-рішення.',
+    principle3Desc: 'Не втручається у ваші дизайн-рішення',
     principle4Title: 'Доступність',
-    principle4Desc: 'Правильні focus-стилі та підтримка motion-преференцій.',
+    principle4Desc: 'Правильні focus-стилі та підтримка motion-преференцій',
     principle5Title: 'Передбачуваність',
-    principle5Desc: 'Консистентна поведінка в сучасних браузерах.',
+    principle5Desc: 'Консистентна поведінка в сучасних браузерах',
     principle6Title: 'Легковаговий',
     principle6Desc:
-      'Всього 2.5KB у мініфікованому вигляді — без зайвого, тільки необхідне.',
-    comparisonTitle: 'Чому не reset.css або normalize.css?',
-    compFeature: 'Функція',
-    compFocus: 'Сучасні focus-стилі',
-    compMotion: 'prefers-reduced-motion',
-    compDisabled: 'button:disabled cursor',
-    compSelection: '::selection стилі',
-    compTarget: ':target scroll margin',
-    compLegacy: 'Немає застарілих хаків',
-    compWeight: 'Легкий',
+      'Всього 2.5KB у мініфікованому вигляді — без зайвого, тільки необхідне',
     testimonialsTitle: 'Що кажуть розробники',
     testimonial1:
       'Найкращий CSS reset, який я використовував! Легкий, сучасний і не ламає мої стилі. Дуже рекомендую!',
@@ -167,6 +155,74 @@ function toggleTheme() {
     localStorage.setItem('theme', 'dark');
   }
 }
+
+// Mobile Menu Toggle with Animation
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const navMenu = document.getElementById('navMenu');
+
+function toggleMobileMenu() {
+  mobileMenuBtn.classList.toggle('active');
+  navMenu.classList.toggle('active');
+  document.body.style.overflow = navMenu.classList.contains('active')
+    ? 'hidden'
+    : '';
+}
+
+mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+// Close menu when clicking on a link
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (navMenu.classList.contains('active')) {
+      toggleMobileMenu();
+    }
+  });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', e => {
+  if (
+    navMenu.classList.contains('active') &&
+    !navMenu.contains(e.target) &&
+    !mobileMenuBtn.contains(e.target)
+  ) {
+    toggleMobileMenu();
+  }
+});
+
+// Header scroll effect
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header');
+  if (window.scrollY > 50) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+
+// Active link highlighting on scroll
+const sections = document.querySelectorAll(
+  '#principles, #testimonials, #install',
+);
+const navLinks = document.querySelectorAll('.nav-menu a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionBottom = sectionTop + section.offsetHeight;
+    if (scrollY >= sectionTop && scrollY < sectionBottom) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+});
 
 // Event listeners
 document.getElementById('langToggle').addEventListener('click', () => {
