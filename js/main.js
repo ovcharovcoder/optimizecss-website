@@ -137,11 +137,19 @@ function updateLanguage() {
   document.documentElement.lang = currentLang === 'uk' ? 'uk' : 'en';
 }
 
-// Theme toggle
+// Theme toggle - DARK MODE BY DEFAULT
 function initTheme() {
   const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark') {
+  if (savedTheme === 'light') {
+    // Якщо користувач раніше вибрав світлу тему - показуємо світлу
+    document.documentElement.removeAttribute('data-theme');
+  } else if (savedTheme === 'dark') {
+    // Якщо користувач раніше вибрав темну тему - показуємо темну
     document.documentElement.setAttribute('data-theme', 'dark');
+  } else {
+    // Якщо немає збережених налаштувань - показуємо темний режим за замовчуванням
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('theme', 'dark');
   }
 }
 
@@ -168,12 +176,14 @@ function toggleMobileMenu() {
     : '';
 }
 
-mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+if (mobileMenuBtn) {
+  mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+}
 
 // Close menu when clicking on a link
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.addEventListener('click', () => {
-    if (navMenu.classList.contains('active')) {
+    if (navMenu && navMenu.classList.contains('active')) {
       toggleMobileMenu();
     }
   });
@@ -182,8 +192,10 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 // Close menu when clicking outside
 document.addEventListener('click', e => {
   if (
+    navMenu &&
     navMenu.classList.contains('active') &&
     !navMenu.contains(e.target) &&
+    mobileMenuBtn &&
     !mobileMenuBtn.contains(e.target)
   ) {
     toggleMobileMenu();
@@ -193,10 +205,12 @@ document.addEventListener('click', e => {
 // Header scroll effect
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.header');
-  if (window.scrollY > 50) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
+  if (header) {
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
   }
 });
 
@@ -211,7 +225,7 @@ window.addEventListener('scroll', () => {
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 100;
     const sectionBottom = sectionTop + section.offsetHeight;
-    if (scrollY >= sectionTop && scrollY < sectionBottom) {
+    if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
       current = section.getAttribute('id');
     }
   });
@@ -225,12 +239,18 @@ window.addEventListener('scroll', () => {
 });
 
 // Event listeners
-document.getElementById('langToggle').addEventListener('click', () => {
-  currentLang = currentLang === 'uk' ? 'en' : 'uk';
-  updateLanguage();
-});
+const langToggle = document.getElementById('langToggle');
+if (langToggle) {
+  langToggle.addEventListener('click', () => {
+    currentLang = currentLang === 'uk' ? 'en' : 'uk';
+    updateLanguage();
+  });
+}
 
-document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+const themeToggle = document.getElementById('themeToggle');
+if (themeToggle) {
+  themeToggle.addEventListener('click', toggleTheme);
+}
 
 // Initialize
 initTheme();
