@@ -857,6 +857,10 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .author-info div {
+    text-align: left;
+  }
+
   .footer-content {
     flex-direction: column;
     text-align: center;
