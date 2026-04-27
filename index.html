@@ -26,6 +26,42 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#home">
+              <span class="logo-icon">&lt;/&gt;</span>
+              <span class="logo-text">Optimize<span>.css</span></span>
+            </a>
+          </div>
+
+          <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span class="burger-icon">
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+              <span class="burger-line"></span>
+            </span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <li>
+              <a href="#principles" data-i18n="navPrinciples">Key Principles</a>
+            </li>
+            <li>
+              <a href="#testimonials" data-i18n="navTestimonials"
+                >Testimonials</a
+              >
+            </li>
+            <li>
+              <a href="#install" data-i18n="navInstall">How to install</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
     <!-- Theme Toggle -->
     <div class="theme-toggle" id="themeToggle">
       <i class="fas fa-sun"></i>
@@ -39,7 +75,7 @@
       <span id="langEN" class="active">EN</span>
     </div>
 
-    <div class="hero">
+    <div class="hero" id="home">
       <!-- Flying CSS Code Background -->
       <div class="flying-code">
         <div class="code-line">
@@ -166,7 +202,9 @@
           <span class="punctuation">{</span>
           <span class="property">transition</span>
           <span class="punctuation">:</span>
-          <span class="value">all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)</span>
+          <span class="value"
+            >all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)</span
+          >
           <span class="punctuation">;</span>
           <span class="punctuation">}</span>
         </div>
@@ -239,7 +277,7 @@
 
     <div class="container">
       <!-- Info Cards - 6 Principles in 3x2 grid -->
-      <div class="info-section">
+      <div class="info-section" id="principles">
         <h2 class="section-title" data-i18n="principlesTitle">
           Key Principles
         </h2>
@@ -248,108 +286,49 @@
             <i class="fas fa-feather-alt"></i>
             <h3 data-i18n="principle1Title">Minimalism</h3>
             <p data-i18n="principle1Desc">
-              Only essential resets, no unnecessary overrides.
+              Only essential resets, no unnecessary overrides
             </p>
           </div>
           <div class="info-card">
             <i class="fas fa-chart-line"></i>
             <h3 data-i18n="principle2Title">Stability</h3>
             <p data-i18n="principle2Desc">
-              No rules that break layouts or native behavior.
+              No rules that break layouts or native behavior
             </p>
           </div>
           <div class="info-card">
             <i class="fas fa-palette"></i>
             <h3 data-i18n="principle3Title">Neutral baseline</h3>
             <p data-i18n="principle3Desc">
-              No interference with your design decisions.
+              No interference with your design decisions
             </p>
           </div>
           <div class="info-card">
             <i class="fas fa-universal-access"></i>
             <h3 data-i18n="principle4Title">Accessibility-first</h3>
             <p data-i18n="principle4Desc">
-              Proper focus styles and motion preferences support.
+              Proper focus styles and motion preferences support
             </p>
           </div>
           <div class="info-card">
             <i class="fas fa-brain"></i>
             <h3 data-i18n="principle5Title">Predictability</h3>
             <p data-i18n="principle5Desc">
-              Consistent behavior across modern browsers.
+              Consistent behavior across modern browsers
             </p>
           </div>
           <div class="info-card">
             <i class="fas fa-box"></i>
             <h3 data-i18n="principle6Title">Lightweight</h3>
             <p data-i18n="principle6Desc">
-              Only 2.5KB minified — no bloat, just essentials.
+              Only 2.5KB minified — no bloat, just essentials
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Comparison Table -->
-      <div class="comparison">
-        <h3 data-i18n="comparisonTitle">Why not reset.css or normalize.css?</h3>
-        <table>
-          <thead>
-            <tr>
-              <th data-i18n="compFeature">Feature</th>
-              <th>reset.css</th>
-              <th>normalize.css</th>
-              <th><strong>Optimize.css</strong></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td data-i18n="compFocus">Modern focus styles</td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-check"></i></td>
-            </tr>
-            <tr>
-              <td data-i18n="compMotion">prefers-reduced-motion</td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-check"></i></td>
-            </tr>
-            <tr>
-              <td data-i18n="compDisabled">button:disabled cursor</td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-check"></i></td>
-            </tr>
-            <tr>
-              <td data-i18n="compSelection">::selection styling</td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-check"></i></td>
-            </tr>
-            <tr>
-              <td data-i18n="compTarget">:target scroll margin</td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-check"></i></td>
-            </tr>
-            <tr>
-              <td data-i18n="compLegacy">No legacy hacks</td>
-              <td><i class="fas fa-check"></i></td>
-              <td><i class="fas fa-exclamation-triangle"></i></td>
-              <td><i class="fas fa-check"></i></td>
-            </tr>
-            <tr>
-              <td data-i18n="compWeight">Lightweight</td>
-              <td><i class="fas fa-check"></i></td>
-              <td><i class="fas fa-times"></i></td>
-              <td><i class="fas fa-check"></i></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
       <!-- Testimonials -->
-      <div class="testimonials">
+      <div class="testimonials" id="testimonials">
         <h2 class="section-title" data-i18n="testimonialsTitle">
           What developers say
         </h2>
@@ -416,7 +395,7 @@
       </div>
 
       <!-- How to install - Two options -->
-      <div class="info-section">
+      <div class="info-section" id="install">
         <h2 class="section-title" data-i18n="howToTitle">How to install</h2>
         <div class="install-options">
           <!-- Full Version -->
@@ -450,9 +429,7 @@
               <i class="fas fa-file-zipper"></i>
               <span data-i18n="minVersion">Minified Version</span>
             </h4>
-            <div class="file-size" data-i18n="minSize">
-              ~2.5KB (minified)
-            </div>
+            <div class="file-size" data-i18n="minSize">~2.5KB (minified)</div>
             <p data-i18n="minDesc">
               Optimized for production — smaller size, faster loading. All
               features, no comments.
