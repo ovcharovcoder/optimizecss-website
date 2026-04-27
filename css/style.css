@@ -274,7 +274,7 @@ body {
   isolation: isolate;
   display: flex;
   align-items: center;
-  padding: 180px 0 120px 0;
+  padding: 220px 0 120px 0;
 }
 
 /* Затемнення фону для кращої читабельності тексту */
@@ -808,74 +808,6 @@ body {
 }
 
 /* ===== MOBILE RESPONSIVE STYLES ===== */
-@media (max-width: 768px) {
-  /* Show burger button on mobile */
-  .mobile-menu-btn {
-    display: block;
-  }
-
-  /* Hide desktop menu, show mobile menu as overlay */
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 320px;
-    height: 100vh;
-    background: var(--bg-card);
-    backdrop-filter: blur(20px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    transition: right 0.3s ease-in-out;
-    z-index: 1001;
-    box-shadow: var(--shadow-lg);
-    margin: 0;
-    padding: 2rem;
-  }
-
-  .nav-menu.active {
-    right: 0;
-  }
-
-  .nav-menu li a {
-    font-size: 1.25rem;
-    padding: 0.75rem;
-  }
-
-  .navbar {
-    padding: 0.75rem 0;
-  }
-
-  .logo-text {
-    font-size: 1.25rem;
-  }
-
-  .logo-icon {
-    font-size: 1.5rem;
-  }
-
-  /* Adjust hero padding for fixed header */
-  .hero {
-    padding: 140px 0 60px 0;
-  }
-
-  /* Adjust theme and language toggles for mobile */
-  .theme-toggle,
-  .lang-toggle {
-    top: 12px;
-  }
-
-  .lang-toggle {
-    right: 100px;
-  }
-
-  .theme-toggle {
-    right: 16px;
-  }
-}
-
 @media (max-width: 1700px) {
   .lang-toggle,
   .theme-toggle {
@@ -931,10 +863,71 @@ body {
   }
 }
 
-@media (max-width: 765px) {
+@media (max-width: 768px) {
+  /* Show burger button on mobile */
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  /* Hide desktop menu, show mobile menu as overlay */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: var(--bg-card);
+    backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+    box-shadow: var(--shadow-lg);
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+
+  .nav-menu li a {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+  }
+
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .logo-text {
+    font-size: 1.25rem;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+
+  /* Adjust hero padding for fixed header */
+  .hero {
+    padding: 140px 0 60px 0;
+  }
+
+  /* Adjust theme and language toggles for mobile */
   .lang-toggle,
   .theme-toggle {
     top: 70px;
+  }
+
+  .lang-toggle {
+    right: 100px;
+  }
+
+  .theme-toggle {
+    right: 16px;
   }
 }
 
@@ -948,7 +941,7 @@ body {
   }
 
   .hero {
-    padding: 120px 0 40px 0;
+    padding: 160px 0 40px 0;
   }
 
   .info-section,
