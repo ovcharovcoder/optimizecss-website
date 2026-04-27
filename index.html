@@ -1,67 +1,398 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="Optimize.css is an optimized CSS reset for modern web development that provides clean and consistent styling across browsers." />
-		<title>OptimizeCSS</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-		rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="css/optimize_min.css" />
-		<link rel="stylesheet" href="css/style.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Optimize.css — modern CSS reset for web developers. Lightweight, accessible, predictable."
+    />
+    <meta name="author" content="Andrii Ovcharov" />
+    <meta name="version" content="3.0" />
+    <link rel="icon" type="img/png" href="img/icon.png" />
+    <link rel="shortcut icon" type="img/png" href="img/icon.png" />
+    <title>Optimize.css | Modern CSS Reset for Developers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/optimize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" id="themeToggle">
+      <i class="fas fa-sun"></i>
+      <i class="fas fa-moon"></i>
+    </div>
 
-		 <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93E30DKW2K"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!-- Language Toggle -->
+    <div class="lang-toggle" id="langToggle">
+      <span id="langUA">UA</span>
+      <span>|</span>
+      <span id="langEN" class="active">EN</span>
+    </div>
 
-      gtag('config', 'G-93E30DKW2K');
-    </script>
-	</head>
-	<body>
-		<div class="promo">
-			<div class="container">
-				<div class="promo__inner">
-					<div class="promo__item item-1">
-						<img
-							class="promo__item-img image-1"
-							src="img/image-1.webp"
-							alt="A man on a rocket"
-						/>
-						<a class="promo__btn"
-                                          href="https://raw.githubusercontent.com/datoshcode/optimize.css/main/optimize.css"
-                                          >Download</a>
-					</div>
-					<div class="promo__item">
-						<h1 class="promo__item-title">Optimizecss</h1>
-						<h2 class="promo__item-subtitle">
-							An optimized CSS reset for modern web development
-						</h2>
-						<img
-							class="promo__item-img image-2"
-							src="img/image-2.webp"
-							alt="A man on a rocket"
-						/>
-					</div>
-				</div>
-				<div class="promo__about">
-					<p class="promo__about-text">
-						Optimize.css ensures consistent styling across all browsers,
-						aligning with modern web standards. It focuses on refining only the
-						necessary styles for a clean and stable foundation.
-					</p>
-					<a
-						class="promo__about-btn"
-						href="https://github.com/ovcharovcoder/optimize.css"
-						>Learn more on GitHub</a
-					>
-				</div>
-			</div>
-		</div>
-	</body>
+    <div class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div class="hero__content">
+            <div class="hero__badge" data-i18n="badge">
+              ⚡ v3.0 | Modern CSS Reset
+            </div>
+            <h1 data-i18n="title">
+              Optimize<span
+                style="
+                  background: linear-gradient(135deg, #764ba2, #667eea);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  color: transparent;
+                "
+                >.css</span
+              >
+            </h1>
+            <p class="hero__description" data-i18n="description">
+              A minimal, modern CSS reset for stable and predictable UI
+              development.
+            </p>
+            <div class="hero__stats">
+              <div class="stat">
+                <span class="stat__value">2.5KB</span>
+                <span class="stat__label" data-i18n="statSize">minified</span>
+              </div>
+              <div class="stat">
+                <span class="stat__value">100%</span>
+                <span class="stat__label" data-i18n="statCoverage"
+                  >compatibility</span
+                >
+              </div>
+              <div class="stat">
+                <span class="stat__value">MIT</span>
+                <span class="stat__label" data-i18n="statLicense">license</span>
+              </div>
+            </div>
+            <div class="download-group">
+              <a
+                href="https://raw.githubusercontent.com/datoshcode/optimize.css/main/optimize.css"
+                class="btn btn-primary"
+                download
+                target="_blank"
+              >
+                <i class="fas fa-download"></i>
+                <span data-i18n="downloadFull">Get full version</span>
+              </a>
+              <a
+                href="https://raw.githubusercontent.com/datoshcode/optimize.css/main/optimize_min.css"
+                class="btn btn-secondary"
+                download
+                target="_blank"
+              >
+                <i class="fas fa-file-zipper"></i>
+                <span data-i18n="downloadMin">Get minified</span>
+              </a>
+            </div>
+          </div>
+          <div class="hero__image">
+            <img src="img/image-1.webp" alt="Cosmonaut on rocket" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Info Cards - 6 Principles in 3x2 grid -->
+      <div class="info-section">
+        <h2 class="section-title" data-i18n="principlesTitle">
+          Key Principles
+        </h2>
+        <div class="info-grid">
+          <div class="info-card">
+            <i class="fas fa-feather-alt"></i>
+            <h3 data-i18n="principle1Title">Minimalism</h3>
+            <p data-i18n="principle1Desc">
+              Only essential resets, no unnecessary overrides
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-chart-line"></i>
+            <h3 data-i18n="principle2Title">Stability</h3>
+            <p data-i18n="principle2Desc">
+              No rules that break layouts or native behavior
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-palette"></i>
+            <h3 data-i18n="principle3Title">Neutral baseline</h3>
+            <p data-i18n="principle3Desc">
+              No interference with your design decisions
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-universal-access"></i>
+            <h3 data-i18n="principle4Title">Accessibility-first</h3>
+            <p data-i18n="principle4Desc">
+              Proper focus styles and motion preferences support
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-brain"></i>
+            <h3 data-i18n="principle5Title">Predictability</h3>
+            <p data-i18n="principle5Desc">
+              Consistent behavior across modern browsers
+            </p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-box"></i>
+            <h3 data-i18n="principle6Title">Lightweight</h3>
+            <p data-i18n="principle6Desc">
+              Only 2.5KB minified — no bloat, just essentials
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="comparison">
+        <h3 data-i18n="comparisonTitle">Why not reset.css or normalize.css?</h3>
+        <table>
+          <thead>
+            <tr>
+              <th data-i18n="compFeature">Feature</th>
+              <th>reset.css</th>
+              <th>normalize.css</th>
+              <th><strong>Optimize.css</strong></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="compFocus">Modern focus styles</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td data-i18n="compMotion">prefers-reduced-motion</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td data-i18n="compDisabled">button:disabled cursor</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td data-i18n="compSelection">::selection styling</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td data-i18n="compTarget">:target scroll margin</td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td data-i18n="compLegacy">No legacy hacks</td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-exclamation-triangle"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+            <tr>
+              <td data-i18n="compWeight">Lightweight</td>
+              <td><i class="fas fa-check"></i></td>
+              <td><i class="fas fa-times"></i></td>
+              <td><i class="fas fa-check"></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="testimonials">
+        <h2 class="section-title" data-i18n="testimonialsTitle">
+          What developers say
+        </h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text" data-i18n="testimonial1">
+              "The best CSS reset I've used! Lightweight, modern, and doesn't
+              break my styles. Highly recommended!"
+            </p>
+            <div class="testimonial-author">
+              <img src="img/Alex_Johnson.webp" alt="Alex" />
+              <div>
+                <div class="author-name">Alex Johnson</div>
+                <div class="author-title" data-i18n="role1">
+                  Front-end Architect
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text" data-i18n="testimonial2">
+              "prefers-reduced-motion and focus-visible support is what other
+              resets were missing. Great for accessibility."
+            </p>
+            <div class="testimonial-author">
+              <img src="img/Sarah_Chen.webp" alt="Sarah" />
+              <div>
+                <div class="author-name">Sarah Chen</div>
+                <div class="author-title" data-i18n="role2">UI Engineer</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i><i class="fas fa-star"></i
+              ><i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text" data-i18n="testimonial3">
+              "I use it in all my projects! Great alternative to normalize.css,
+              especially for its size and modern features."
+            </p>
+            <div class="testimonial-author">
+              <img src="img/Michael_Rodriguez.webp" alt="Michael" />
+              <div>
+                <div class="author-name">Michael Rodriguez</div>
+                <div class="author-title" data-i18n="role3">
+                  Senior Developer
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- How to install - Two options -->
+      <div class="info-section">
+        <h2 class="section-title" data-i18n="howToTitle">How to install</h2>
+        <div class="install-options">
+          <!-- Full Version -->
+          <div class="install-option">
+            <h4>
+              <i class="fas fa-file"></i>
+              <span data-i18n="fullVersion">Full Version</span>
+            </h4>
+            <div class="file-size" data-i18n="fullSize">~8KB (unminified)</div>
+            <p data-i18n="fullDesc">
+              Complete version with comments and readable formatting. Perfect
+              for development and learning.
+            </p>
+            <a
+              href="https://raw.githubusercontent.com/datoshcode/optimize.css/main/optimize.css"
+              class="btn btn-secondary btn-install"
+              download
+              target="_blank"
+            >
+              <i class="fas fa-download"></i>
+              <span data-i18n="downloadFullBtn">Get full version</span>
+            </a>
+          </div>
+
+          <!-- Minified Version - Recommended -->
+          <div class="install-option recommended">
+            <div class="recommended-badge" data-i18n="recommended">
+              ⭐ RECOMMENDED
+            </div>
+            <h4>
+              <i class="fas fa-file-zipper"></i>
+              <span data-i18n="minVersion">Minified Version</span>
+            </h4>
+            <div class="file-size" data-i18n="minSize">
+              ~2.5KB (minified + gzipped)
+            </div>
+            <p data-i18n="minDesc">
+              Optimized for production — smaller size, faster loading. All
+              features, no comments.
+            </p>
+            <a
+              href="https://raw.githubusercontent.com/datoshcode/optimize.css/main/optimize_min.css"
+              class="btn btn-primary btn-install"
+              download
+              target="_blank"
+            >
+              <i class="fas fa-download"></i>
+              <span data-i18n="downloadMinBtn">Get minified</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Installation Instructions -->
+        <div class="info-card" style="margin-top: 30px">
+          <i class="fas fa-code"></i>
+          <h3 data-i18n="installTitle">Add to your HTML</h3>
+          <p data-i18n="installDesc">Add before your main stylesheet:</p>
+          <div class="code-block">
+            <pre>
+              &lt;link rel="stylesheet" href="optimize.css"&gt;
+              or
+              &lt;link rel="stylesheet" href="optimize_min.css"&gt;
+              &lt;link rel="stylesheet" href="your-styles.css"&gt;</pre
+            >
+          </div>
+          <p
+            data-i18n="installNote"
+            style="color: var(--text-muted); margin-top: 16px"
+          >
+            ⚠️ Connect before your main stylesheet so resets apply first. We
+            recommend the minified version for production.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="author-info">
+            <img
+              src="img/avatar.webp"
+              alt="Andrii Ovcharov"
+              class="author-avatar"
+            />
+            <div>
+              <div><strong>Andrii Ovcharov</strong></div>
+              <div>
+                <a href="mailto:ovcharovcoder@gmail.com" style="color: #667eea"
+                  >ovcharovcoder@gmail.com</a
+                >
+              </div>
+            </div>
+          </div>
+          <div>
+            <p data-i18n="buildDate">Build date: 27.04.2026 | Version 3.0</p>
+            <p>
+              © 2026 Optimize.css |
+              <a href="#" style="color: #667eea" data-i18n="license"
+                >MIT License</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
 </html>
