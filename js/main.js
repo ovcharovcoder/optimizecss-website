@@ -48,7 +48,7 @@ const translations = {
     fullDesc:
       'Complete version with comments and readable formatting. Perfect for development and learning.',
     minVersion: 'Minified Version',
-    minSize: '~1.5KB (minified + gzipped)',
+    minSize: '~1.5KB (minified)',
     minDesc:
       'Optimized for production — smaller size, faster loading. All features, no comments.',
     downloadFullBtn: 'Get full version',
@@ -106,11 +106,11 @@ const translations = {
     role3: 'Старший Розробник',
     howToTitle: 'Як встановити',
     fullVersion: 'Повна версія',
-    fullSize: '~3KB (не мініфікована)',
+    fullSize: '~3KB (не стиснута)',
     fullDesc:
       'Повна версія з коментарями та читабельним форматуванням. Ідеально для розробки та навчання.',
     minVersion: 'Мініфікована версія',
-    minSize: '~1.5KB (мініфікована + стиснута)',
+    minSize: '~1.5KB (стиснута)',
     minDesc:
       'Оптимізовано для продакшену — менший розмір, швидше завантаження. Всі функції, без коментарів.',
     downloadFullBtn: 'Отримати повну версію',
